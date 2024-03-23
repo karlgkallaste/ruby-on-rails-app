@@ -1,0 +1,16 @@
+creating a new controller - ruby bin/rails generate controller Articles index --skip-routes
+
+creating a new model - ruby bin/rails generate model Article title:string body:text
+
+
+run migration  - ruby bin/rails db:migrate
+running app ruby bin/rails server
+
+
+λ ruby bin/rails console
+
+irb(main):002> article = Article.new(title: "Hello rails", body:"Body of text")
+=> #<Article:0x0000025ba41c6e50 id: nil, title: "Hello rails", body: "Body of text", created_at: nil, updated_at: nil>
+irb(main):004> article.save
+irb(main):005> Article.find(1)
+irb(main):006> Article.all
